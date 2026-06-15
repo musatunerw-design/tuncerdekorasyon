@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tuncer Dekorasyon | Garantili Boya & Ev İçi Dekorasyon</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Playfair+Display:ital,wght@0,600;0,800;1,600&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            /* Premium Renk Paleti */
+            --primary-dark: #1A2B4C; /* Derin Lacivert - Güven ve Profesyonellik */
+            --gold-accent: #C5A880; /* Zarif Altın - Lüks ve Kalite */
+            --gold-hover: #b3956d;
+            --bg-light: #F8F9FA;
+            --text-dark: #2C3E50;
+            --text-muted: #64748B;
+            --white: #ffffff;
+            --whatsapp: #25D366;
+            --transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            font-family: 'Montserrat', sans-serif;
+            line-height: 1.8;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        h1, h2, h3, .logo {
+            font-family: 'Playfair Display', serif;
+        }
+
+        a { text-decoration: none; }
+
+        /* Kayan WhatsApp Butonu */
+        .floating-whatsapp {
+            position: fixed;
+            bottom: 40px;
+            right: 40px;
+            background-color: var(--whatsapp);
+            color: white;
+            width: 65px;
+            height: 65px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 10px 25px rgba(37, 211, 102, 0.3);
+            z-index: 9999;
+            transition: var(--transition);
+        }
+
+        .floating-whatsapp:hover {
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0 15px 35px rgba(37, 211, 102, 0.4);
+        }
+
+        .floating-whatsapp svg {
+            width: 38px;
+            height: 38px;
+            fill: currentColor;
+        }
+
+        /* Header */
+        header {
+            background-color: var(--white);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 90px;
+        }
+
+        .logo {
+            font-size: 2rem;
+            font-weight: 800;
+            color: var(--primary-dark);
+            letter-spacing: 0.5px;
+        }
+
+        .logo span {
+            color: var(--gold-accent);
+            font-style: italic;
+        }
+
+        .header-action {
+            display: flex;
+            gap: 24px;
+            align-items: center;
+        }
+
+        .header-phone {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            color: var(--text-dark);
+            font-size: 1.1rem;
+            transition: color 0.3s ease;
+        }
+
+        .header-phone:hover {
+            color: var(--gold-accent);
+        }
+
+        .btn-outline {
+            border: 2px solid var(--primary-dark);
+            color: var(--primary-dark);
+            padding: 12px 28px;
+            border-radius: 50px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: var(--transition);
+        }
+
+        .btn-outline:hover {
+            background-color: var(--primary-dark);
+            color: var(--white);
+            box-shadow: 0 8px 20px rgba(26, 43, 76, 0.15);
+        }
+
+        /* Hero Bölümü */
+        .hero {
+            background: linear-gradient(to right, rgba(26, 43, 76, 0.95), rgba(26, 43, 76, 0.8)), 
+                        url('https://images.unsplash.com/photo-1562663474-6cbb3eaa4d14?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover;
+            color: var(--white);
+            padding: 160px 20px;
+            text-align: center;
+            position: relative;
+        }
+
+        .hero h1 {
+            font-size: 4.2rem;
+            margin-bottom: 24px;
+            font-weight: 800;
+            line-height: 1.15;
+            text-shadow: 0 4px 20px rgba(0,0,0,0.3);
+        }
+
+        .hero h1 span {
+            color: var(--gold-accent);
+            display: block;
+            font-style: italic;
+            margin-top: 10px;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            font-weight: 300;
+            max-width: 700px;
+            margin: 0 auto 45px auto;
+            color: rgba(255, 255, 255, 0.9);
+            line-height: 1.9;
+        }
+
+        .btn-primary {
+            background-color: var(--gold-accent);
+            color: var(--white);
+            padding: 18px 45px;
+            font-size: 1.1rem;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            border-radius: 50px;
+            transition: var(--transition);
+            display: inline-block;
+            letter-spacing: 1px;
+            box-shadow: 0 10px 30px rgba(197, 168, 128, 0.3);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--gold-hover);
+            transform: translateY(-4px);
+            box-shadow: 0 15px 35px rgba(197, 168, 128, 0.4);
+        }
+
+        /* Güven (Neden Biz?) Bölümü */
+        .trust-section {
+            padding: 0;
+            margin-top: -60px;
+            position: relative;
+            z-index: 10;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+        }
+
+        .feature-box {
+            background-color: var(--white);
+            padding: 50px 35px;
+            border-radius: 16px;
+            text-align: center;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.06);
+            transition: var(--transition);
+            border-bottom: 4px solid transparent;
+        }
+
+        .feature-box:hover {
+            transform: translateY(-10px);
+            border-bottom-color: var(--gold-accent);
+            box-shadow: 0 25px 50px rgba(0,0,0,0.1);
+        }
+
+        .icon-circle {
+            width: 80px;
+            height: 80px;
+            background-color: rgba(197, 168, 128, 0.1);
+            color: var(--gold-accent);
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto 25px auto;
+            font-size: 2.2rem;
+            transition: var(--transition);
+        }
+
+        .feature-box:hover .icon-circle {
+            background-color: var(--gold-accent);
+            color: var(--white);
+        }
+
+        .feature-box h3 {
+            font-size: 1.6rem;
+            color: var(--primary-dark);
+            margin-bottom: 15px;
+        }
+
+        .feature-box p {
+            color: var(--text-muted);
+            font-size: 1.05rem;
+            font-weight: 400;
+        }
+
+        /* Bilgi Alanı */
+        .info-section {
+            padding: 100px 20px;
+            text-align: center;
+            background-color: var(--bg-light);
+        }
+
+        .info-section h2 {
+            font-size: 2.5rem;
+            color: var(--primary-dark);
+            margin-bottom: 25px;
+        }
+
+        .info-section p {
+            color: var(--text-muted);
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 1.15rem;
+            line-height: 2;
+        }
+
+        /* Call to Action */
+        .cta-section {
+            background-color: var(--primary-dark);
+            color: var(--white);
+            text-align: center;
+            padding: 100px 20px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* CTA Arka Plan Deseni */
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: radial-gradient(circle at center, rgba(197, 168, 128, 0.1) 0%, transparent 70%);
+        }
+
+        .cta-section .container {
+            position: relative;
+            z-index: 2;
+        }
+
+        .cta-section h2 {
+            font-size: 2.8rem;
+            margin-bottom: 20px;
+            color: var(--gold-accent);
+        }
+
+        .cta-section p {
+            font-size: 1.2rem;
+            font-weight: 300;
+            color: rgba(255,255,255,0.8);
+        }
+
+        .phone-huge {
+            display: inline-block;
+            font-size: 4.5rem;
+            font-weight: 800;
+            color: var(--white);
+            margin: 40px 0;
+            letter-spacing: 2px;
+            font-family: 'Montserrat', sans-serif;
+            transition: var(--transition);
+        }
+
+        .phone-huge:hover {
+            color: var(--gold-accent);
+            transform: scale(1.05);
+        }
+
+        /* Footer */
+        .footer-bottom {
+            background-color: #0F192D; /* En koyu lacivert */
+            color: rgba(255,255,255,0.5);
+            text-align: center;
+            padding: 30px 20px;
+            font-size: 0.95rem;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        /* Mobil Uyumluluk */
+        @media (max-width: 992px) {
+            .hero h1 { font-size: 3.2rem; }
+            .phone-huge { font-size: 3.5rem; }
+        }
+
+        @media (max-width: 768px) {
+            .navbar { justify-content: center; height: 80px; }
+            .header-action { display: none; }
+            .hero { padding: 120px 20px; }
+            .hero h1 { font-size: 2.5rem; }
+            .hero p { font-size: 1.1rem; }
+            .feature-box { padding: 40px 25px; }
+            .phone-huge { font-size: 2.5rem; margin: 30px 0; }
+            .info-section h2 { font-size: 2rem; }
+            .floating-whatsapp { bottom: 20px; right: 20px; width: 55px; height: 55px; }
+        }
+    </style>
+</head>
+<body>
+
+    <a href="https://wa.me/905375723923?text=Merhaba,%20ücretsiz%20keşif%20ve%20fiyat%20bilgisi%20almak%20istiyorum." target="_blank" class="floating-whatsapp" aria-label="WhatsApp ile İletişime Geçin">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766 0 1.011.263 1.996.763 2.862l-.818 2.986 3.056-.801c.842.457 1.796.699 2.766.699 3.182 0 5.768-2.585 5.769-5.766 0-3.181-2.586-5.767-5.768-5.767zm3.176 8.082c-.174.49-1.026.94-1.428.986-.401.045-.968.134-3.111-.75-2.581-1.065-4.225-3.693-4.354-3.865-.13-.172-1.04-1.385-1.04-2.641 0-1.256.65-1.879.882-2.122.23-.243.504-.304.678-.304.173 0 .347.006.491.013.153.008.358-.061.544.389.191.464.65 1.583.708 1.698.058.116.096.252.009.426-.086.173-.13.282-.26.434-.13.152-.271.325-.389.458-.13.146-.266.304-.114.568.151.264.675 1.118 1.442 1.802.986.879 1.826 1.144 2.086 1.26.26.115.412.096.568-.083.156-.179.673-.784.853-1.053.18-.269.36-.224.6-.134.24.089 1.517.714 1.777.844.26.13.434.192.497.298.064.107.064.62-.11 1.11z"/>
+            <path d="M12.031 2c5.498 0 9.969 4.471 9.969 9.969 0 5.498-4.471 9.969-9.969 9.969-1.748 0-3.415-.453-4.88-1.282l-5.46 1.431 1.463-5.326c-.924-1.52-1.413-3.279-1.413-5.092 0-5.498 4.471-9.969 9.969-9.969zm0-2c-6.603 0-11.969 5.366-11.969 11.969 0 2.112.548 4.148 1.59 5.95l-2.28 8.307 8.514-2.234c1.748.96 3.693 1.465 5.679 1.465 6.603 0 11.969-5.366 11.969-11.969 0-6.603-5.366-11.969-11.969-11.969z"/>
+        </svg>
+    </a>
+
+    <header>
+        <div class="container navbar">
+            <div class="logo">Tuncer <span>Dekorasyon</span></div>
+            <div class="header-action">
+                <a href="tel:05375723923" class="header-phone">0537 572 39 23</a>
+                <a href="tel:05375723923" class="btn-outline">Hemen Ara</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Evinizin Havasını Değiştiren <span>Usta Dokunuşlar</span></h1>
+            <p>Eşyalarınızı naylonla korumaya alıyor, damla boya düşürmeden, tam söz verdiğimiz günde evinizi tertemiz teslim ediyoruz.</p>
+            <a href="tel:05375723923" class="btn-primary">ÜCRETSİZ KEŞİF İSTİYORUM</a>
+        </div>
+    </section>
+
+    <div class="container">
+        <section class="trust-section">
+            <div class="features-grid">
+                <div class="feature-box">
+                    <div class="icon-circle">✨</div>
+                    <h3>Sıfır Leke & Temiz İşçilik</h3>
+                    <p>Parkelerinizi ve tüm eşyalarınızı özel örtülerle kaplarız. İş bitiminde evinizi bulduğumuz gibi tertemiz bırakırız.</p>
+                </div>
+                <div class="feature-box">
+                    <div class="icon-circle">⏱️</div>
+                    <h3>Zamanında Teslimat</h3>
+                    <p>İşi uzatmaz, sizi mağdur etmeyiz. İşe başlama ve bitiş tarihlerimiz nettir, sürpriz yaşamazsınız.</p>
+                </div>
+                <div class="feature-box">
+                    <div class="icon-circle">📐</div>
+                    <h3>Ücretsiz Keşif & Net Fiyat</h3>
+                    <p>Evinize gelir, ölçümleri yapar ve size en uygun fiyatı çıkarırız. İş bitiminde ekstra masraflarla karşılaşmazsınız.</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <section class="info-section">
+        <div class="container">
+            <h2>Tüm Boya, Badana ve Dekorasyon İşleriniz İçin Tek Adres</h2>
+            <p>Yılların verdiği tecrübeyle; silinebilir su bazlı boya uygulamaları, alçıpan, asma tavan, kartonpiyer, kapı ve pencere boyama dahil tüm iç mekan yenileme işlerinizi usta garantisiyle gerçekleştiriyoruz. Kaliteli malzeme ve birinci sınıf işçilik için bize güvenebilirsiniz.</p>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <div class="container">
+            <h2>Hemen Fiyat Alın</h2>
+            <p>Evinizin fotoğraflarını WhatsApp'tan gönderin veya bizi doğrudan arayın.</p>
+            
+            <a href="tel:05375723923" class="phone-huge">0537 572 39 23</a>
+            
+            <p style="opacity: 0.6; font-size: 1rem; margin-top: 10px;">Haftanın 7 Günü Arayabilirsiniz</p>
+        </div>
+    </section>
+
+    <footer class="footer-bottom">
+        <p>&copy; 2026 Tuncer Dekorasyon. Garantili Boya ve Badana Hizmetleri.</p>
+    </footer>
+
+</body>
+</html>
