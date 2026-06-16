@@ -547,8 +547,7 @@
     </style>
 
     <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18242231373">
-    </script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18242231373"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
@@ -556,11 +555,27 @@
 
       gtag('config', 'AW-18242231373');
     </script>
+    
+    <!-- Event snippet for Kişi conversion page -->
+    <script>
+      function gtag_report_conversion(url) {
+        var callback = function () {
+          if (typeof(url) != 'undefined') {
+            window.location = url;
+          }
+        };
+        gtag('event', 'conversion', {
+            'send_to': 'AW-18242231373/B_HZCMnM-78cEM24yfpD',
+            'event_callback': callback
+        });
+        return false;
+      }
+    </script>
 </head>
 <body>
 
     <!-- Kayan Arama Butonu -->
-    <a href="tel:05375723923" class="floating-phone" aria-label="Hemen Arayın">
+    <a href="tel:05375723923" class="floating-phone" aria-label="Hemen Arayın" onclick="return gtag_report_conversion('tel:05375723923');">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
             <path d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56a.977.977 0 00-1.01.24l-1.57 1.97c-2.83-1.35-5.48-3.9-6.89-6.83l1.95-1.66c.27-.28.35-.67.24-1.02-.37-1.11-.56-2.3-.56-3.53 0-.54-.45-.99-.99-.99H4.19C3.65 3 3 3.24 3 3.99 3 13.28 10.73 21 20.01 21c.71 0 .99-.63.99-1.18v-3.45c0-.54-.45-.99-.99-.99z"/>
         </svg>
@@ -573,11 +588,11 @@
                 <span class="logo-icon">❖</span> Tunçer Dekorasyon
             </div>
             <div class="header-cta">
-                <a href="tel:05375723923" class="header-phone-text">
+                <a href="tel:05375723923" class="header-phone-text" onclick="return gtag_report_conversion('tel:05375723923');">
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56a.977.977 0 00-1.01.24l-1.57 1.97c-2.83-1.35-5.48-3.9-6.89-6.83l1.95-1.66c.27-.28.35-.67.24-1.02-.37-1.11-.56-2.3-.56-3.53 0-.54-.45-.99-.99-.99H4.19C3.65 3 3 3.24 3 3.99 3 13.28 10.73 21 20.01 21c.71 0 .99-.63.99-1.18v-3.45c0-.54-.45-.99-.99-.99z"/></svg>
                     0537 572 39 23
                 </a>
-                <a href="tel:05375723923" class="btn btn-primary header-btn">Ücretsiz Keşif</a>
+                <a href="tel:05375723923" class="btn btn-primary header-btn" onclick="return gtag_report_conversion('tel:05375723923');">Ücretsiz Keşif</a>
             </div>
         </div>
     </header>
@@ -590,7 +605,7 @@
                 <h1>Evinizi Sanata Dönüştüren <span>Kusursuz Ustalık</span></h1>
                 <p>Musa Usta ve profesyonel ekibiyle; eşyalarınızı özenle koruyor, tek bir boya damlası düşürmeden, tam söz verdiğimiz günde yaşam alanlarınızı yeniliyoruz.</p>
                 
-                <a href="tel:05375723923" class="btn btn-accent" style="font-size: 1.1rem; padding: 18px 40px;">
+                <a href="tel:05375723923" class="btn btn-accent" style="font-size: 1.1rem; padding: 18px 40px;" onclick="return gtag_report_conversion('tel:05375723923');">
                     Hemen Arayın, Fiyat Alın
                 </a>
 
@@ -709,10 +724,10 @@
                 <h2 class="brand-font">Evinizi Yenileme Vakti Geldi mi?</h2>
                 <p>Ücretsiz keşif hizmetimizden yararlanmak ve işinizi şansa bırakmamak için Musa Usta'yı hemen arayın. Haftanın 7 günü bize ulaşabilirsiniz.</p>
                 
-                <a href="tel:05375723923" class="massive-phone">0537 572 39 23</a>
+                <a href="tel:05375723923" class="massive-phone" onclick="return gtag_report_conversion('tel:05375723923');">0537 572 39 23</a>
                 
                 <div style="margin-top: 30px;">
-                    <a href="tel:05375723923" class="btn btn-accent" style="padding: 16px 40px; font-size: 1.1rem;">
+                    <a href="tel:05375723923" class="btn btn-accent" style="padding: 16px 40px; font-size: 1.1rem;" onclick="return gtag_report_conversion('tel:05375723923');">
                         Şimdi Ara ve Randevu Al
                     </a>
                 </div>
